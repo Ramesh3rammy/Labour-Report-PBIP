@@ -13,6 +13,9 @@ table 'CARL_CS02 CSWO_WO'
 		formatString: 0
 		lineageTag: eb5fd576-ac95-48a2-9f2a-3b560a5a1baa
 
+	measure 'count_blank' = COUNTBLANK('CARL_CS02 CSWO_WO'[WOCODE])
+		formatString: 0
+
 	column PWO_ID
 		dataType: string
 		lineageTag: b73f9b4d-b11a-4108-ad7d-4041c6032f75

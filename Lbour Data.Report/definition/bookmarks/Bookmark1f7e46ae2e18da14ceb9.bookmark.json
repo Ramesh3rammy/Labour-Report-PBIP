@@ -1,0 +1,247 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/2.1.0/schema.json",
+  "displayName": "RESET",
+  "name": "Bookmark1f7e46ae2e18da14ceb9",
+  "options": {
+    "targetVisualNames": [
+      "9f9776906b3809cb30bd"
+    ]
+  },
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "ReportSection8335747f78732bcb6ba0",
+    "sections": {
+      "ReportSection8335747f78732bcb6ba0": {
+        "filters": {
+          "byExpr": [
+            {
+              "name": "Filter2a9b459453bcb33ea504",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "CARL_CS02 CSWO_OCCUPATION (2)"
+                    }
+                  },
+                  "Property": "UOWNER"
+                }
+              },
+              "howCreated": 5
+            }
+          ]
+        },
+        "visualContainers": {
+          "b826d77022ed1637c608": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "9da6894a83a26ab7bd33": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "6f596ada39965de2413d",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "CARL_CS02 CSWO_OCCUPATION (2)"
+                        }
+                      },
+                      "Property": "Time"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c2e38b813b2cc4eb1185",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "CARL_CS02 CSWO_WO"
+                        }
+                      },
+                      "Property": "WOCODE"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0c92992b776177804310",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "CARL_CS02 CSWO_OCCUPATION (2)"
+                        }
+                      },
+                      "Property": "UOWNER"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "275cff3b36f965c55ee3",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "CARL_CS02 CSSY_DESCRIPTION"
+                        }
+                      },
+                      "Property": "COMMENTS"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "tableEx",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "CARL_CS02 CSWO_WO"
+                        }
+                      },
+                      "Property": "WOCODE"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "eaa29f1d058d40153d97": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "9f9776906b3809cb30bd": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "4568b410ec8191af702a",
+                  "type": "Advanced",
+                  "expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "CARL_CS02 CSWO_OCCUPATION (2)"
+                            }
+                          },
+                          "Property": "DURATION"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7e0730967f20d43483c7",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "CARL_CS02 CSWO_OCCUPATION (2)"
+                        }
+                      },
+                      "Property": "total time"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "14c94e3907489a80f323",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "CARL_CS02 CSWO_WO"
+                        }
+                      },
+                      "Property": "WOCODE"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "clusteredBarChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "CARL_CS02 CSWO_OCCUPATION (2)"
+                            }
+                          },
+                          "Property": "DURATION"
+                        }
+                      },
+                      "Function": 0
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "CARL_CS02 CSWO_WO"
+                        }
+                      },
+                      "Property": "WOCODE"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+table 'CARL_CS02 CSSY_DESCRIPTION'
+	lineageTag: f1a4a564-3de2-4122-98ca-cbd517bfc8bb
+
+	measure 'Measure 2' = CALCULATE(DISTINCTCOUNT('CARL_CS02 CSWO_WO'[WOCODE]), 'CARL_CS02 CSWO_ACTIONTYPE'[CODE] = "OFFICE_WORK" )
+		formatString: 0
+		lineageTag: e955c0c6-3280-49d2-841f-feec4affa9ba
+
+	column COLNAME
+		dataType: string
+		lineageTag: 29ac5165-faf7-4e3c-9c55-2328994116f7
+		summarizeBy: none
+		sourceColumn: COLNAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID
+		dataType: string
+		lineageTag: d60f4a34-cfb7-431d-ad1b-f2617add11cb
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column RAWDESCRIPTION
+		dataType: string
+		lineageTag: 7533a4ac-0fe5-473d-a2ed-e8a79d5ddde3
+		summarizeBy: none
+		sourceColumn: RAWDESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column TABNAME
+		dataType: string
+		lineageTag: 99566f7b-0c44-4b13-a553-08d1777a748a
+		summarizeBy: none
+		sourceColumn: TABNAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column VERSION
+		dataType: int64
+		formatString: 0
+		lineageTag: c5dee03a-99d9-452f-b7bd-59987653e197
+		summarizeBy: none
+		sourceColumn: VERSION
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column = MID('CARL_CS02 CSSY_DESCRIPTION'[DESCRIPTION],3,1000000)
+		lineageTag: b511c1ea-92a3-4780-ae2b-243e8c67713e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column DESCRIPTION
+		dataType: string
+		lineageTag: b5331d7c-ef81-432c-b82f-a885d12a8c3a
+		summarizeBy: none
+		sourceColumn: DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column COMMENTS
+		dataType: string
+		lineageTag: 07cb029c-b30a-4f71-98d1-bcbf8512ee08
+		summarizeBy: none
+		sourceColumn: COMMENTS
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'CARL_CS02 CSSY_DESCRIPTION-7f0216ea-1726-4781-b9bf-2a5731a64644' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("DESKTOP-LLHM0HQ\SQLEXPRESS", "CARL_CS02"),
+				    CARL_CS02_CSSY_DESCRIPTION = Source{[Schema="CARL_CS02",Item="CSSY_DESCRIPTION"]}[Data],
+				    #"Removed Other Columns" = Table.SelectColumns(CARL_CS02_CSSY_DESCRIPTION,{"COLNAME", "DESCRIPTION", "ID", "RAWDESCRIPTION", "TABNAME", "VERSION"}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Removed Other Columns",null,"Nothing",Replacer.ReplaceValue,{"DESCRIPTION"}),
+				    #"Added Custom" = Table.AddColumn(#"Replaced Value", "Custom", each Html.Table([DESCRIPTION],{{"PlainText",":root"}})),
+				    #"Expanded Custom" = Table.ExpandTableColumn(#"Added Custom", "Custom", {"PlainText"}, {"Custom.PlainText"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Expanded Custom",{{"Custom.PlainText", "COMMENTS"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_ResultType = Table
+

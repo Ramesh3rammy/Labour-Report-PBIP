@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Lbour Data"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "29055ec0-8e37-4f07-9466-c95b43cd4433"
+  }
+}

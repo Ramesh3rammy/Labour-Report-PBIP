@@ -1,0 +1,7 @@
+role MARKETING
+	modelPermission: read
+
+	tablePermission 'CARL_CS02 CSWO_OCCUPATION (2)' = [TEAM] = "MARKETING"
+
+	annotation PBI_Id = 14c99099e16f42278c0c031aded11dfc
+

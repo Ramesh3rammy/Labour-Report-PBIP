@@ -1,0 +1,94 @@
+table 'CARL_CS02 CSWO_TEAM'
+	lineageTag: de09eae1-b7eb-419a-9271-a29359c01b74
+
+	column UOWNER
+		dataType: string
+		lineageTag: 0a6815ce-697c-41e0-8418-ad1c4c155f54
+		summarizeBy: none
+		sourceColumn: UOWNER
+
+		annotation SummarizationSetBy = Automatic
+
+	column CODE
+		dataType: string
+		lineageTag: 4c38c637-a6cc-47c9-a085-f92cc9d5dce6
+		summarizeBy: none
+		sourceColumn: CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column DESCRIPTION
+		dataType: string
+		lineageTag: 666d1cc9-abd7-4d68-80bc-118f935db03d
+		summarizeBy: none
+		sourceColumn: DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID
+		dataType: string
+		lineageTag: b59da2fe-2ea8-480b-bb31-c6cd21ff7502
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column MODIFYDATE
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: fd144e56-c39b-410b-82c2-cd28b4712da6
+		summarizeBy: none
+		sourceColumn: MODIFYDATE
+
+		variation Variation
+			isDefault
+			relationship: 4e7c8f83-6902-430c-bed3-00709108319f
+			defaultHierarchy: LocalDateTable_84404d02-a642-4ed4-829f-8b08992fcda2.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column PERSOID
+		dataType: string
+		lineageTag: 73192fdd-6212-40c5-90be-4c74f0cf1b19
+		summarizeBy: none
+		sourceColumn: PERSOID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SECUPOLICY_ID
+		dataType: string
+		lineageTag: a62d1a6d-3994-499c-bab9-f38419673ef5
+		summarizeBy: none
+		sourceColumn: SECUPOLICY_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TEMPORALCONTEXTSTORE
+		dataType: string
+		lineageTag: 0fc6143a-4e4b-44d3-a64e-3085befc52b6
+		summarizeBy: none
+		sourceColumn: TEMPORALCONTEXTSTORE
+
+		annotation SummarizationSetBy = Automatic
+
+	column VERSION
+		dataType: int64
+		formatString: 0
+		lineageTag: c75996ed-dcee-4754-86f3-387881e52454
+		summarizeBy: sum
+		sourceColumn: VERSION
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'CARL_CS02 CSWO_TEAM-068cbf86-209d-4308-ab6d-aaf38298c61f' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("DESKTOP-LLHM0HQ\SQLEXPRESS"),
+				    CARL_CS02 = Source{[Name="CARL_CS02"]}[Data],
+				    CARL_CS02_CSWO_TEAM = CARL_CS02{[Schema="CARL_CS02",Item="CSWO_TEAM"]}[Data]
+				in
+				    CARL_CS02_CSWO_TEAM
+
+	annotation PBI_ResultType = Table
+

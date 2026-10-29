@@ -1,0 +1,94 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 53.694914478366663
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 0,
+            "y": 343.72881355932208
+          },
+          "nodeIndex": "CARL_CS02 CSWO_ACTIONTYPE",
+          "size": {
+            "height": 246.1016949152542,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "CARL_CS02 CSWO_WO",
+          "size": {
+            "height": 252.2033898305084,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 298.29322033898319,
+            "y": 337.62711864406782
+          },
+          "nodeIndex": "CARL_CS02 CSSY_DESCRIPTION",
+          "size": {
+            "height": 233.15254237288136,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 294.75254237288118,
+            "y": 3.0508474576270146
+          },
+          "nodeIndex": "CARL_CS02 CSWO_OCCUPATION (2)",
+          "size": {
+            "height": 244.06779661016941,
+            "width": 217.72881355932202
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 637.6728813559323,
+            "y": 0
+          },
+          "nodeIndex": "CARL_CS02 CSWO_TEAM",
+          "size": {
+            "height": 245.15254237288133,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 620.90847457627126,
+            "y": 321.35593220338984
+          },
+          "nodeIndex": "CARL_CS02 CSSY_ACTOR",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 98.333333333333329,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

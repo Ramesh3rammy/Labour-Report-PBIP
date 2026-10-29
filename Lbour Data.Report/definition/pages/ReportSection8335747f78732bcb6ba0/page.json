@@ -1,0 +1,137 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "ReportSection8335747f78732bcb6ba0",
+  "displayName": "Work Comments",
+  "displayOption": "FitToPage",
+  "height": 1000,
+  "width": 1600,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "Filterbfa12a89d788682b3a94",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "CARL_CS02 CSWO_OCCUPATION (2)"
+              }
+            },
+            "Property": "NAME"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "Pod1",
+    "type": "Drillthrough",
+    "parameters": [
+      {
+        "name": "Param_Filterbfa12a89d788682b3a94",
+        "boundFilter": "Filterbfa12a89d788682b3a94",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "CARL_CS02 CSWO_OCCUPATION (2)"
+              }
+            },
+            "Property": "NAME"
+          }
+        }
+      }
+    ]
+  },
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "image": {
+            "image": {
+              "name": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'labour img.jpg'"
+                  }
+                }
+              },
+              "url": {
+                "expr": {
+                  "ResourcePackageItem": {
+                    "PackageName": "RegisteredResources",
+                    "PackageType": 1,
+                    "ItemName": "labour_img797828226585124.jpg"
+                  }
+                }
+              },
+              "scaling": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Fit'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "35D"
+              }
+            }
+          },
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 0,
+                    "Percent": 0
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspace": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 1,
+                    "Percent": 0
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode",
+  "visualInteractions": [
+    {
+      "source": "c1fcd680199c606c0553",
+      "target": "4c0b69187537dab62c94",
+      "type": "DataFilter"
+    },
+    {
+      "source": "c1fcd680199c606c0553",
+      "target": "9da6894a83a26ab7bd33",
+      "type": "DataFilter"
+    },
+    {
+      "source": "c1fcd680199c606c0553",
+      "target": "9f9776906b3809cb30bd",
+      "type": "DataFilter"
+    }
+  ]
+}

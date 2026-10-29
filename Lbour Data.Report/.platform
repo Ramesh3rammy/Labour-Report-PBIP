@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Lbour Data"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "22bd6149-918e-4047-a73d-0c355a36fc6c"
+  }
+}

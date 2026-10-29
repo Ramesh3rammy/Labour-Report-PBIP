@@ -1,0 +1,71 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-AU
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["CARL_CS02 CSWO_ACTIONTYPE","CARL_CS02 CSWO_WO","CARL_CS02 CSSY_DESCRIPTION","CARL_CS02 CSWO_OCCUPATION (2)","CARL_CS02 CSWO_TEAM","CARL_CS02 CSSY_ACTOR"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_RemovedChildren = [{"remoteItemId":{"foreignKeyRelationship":{"fromTableLocalLineageTag":"87ef69ba-8f36-4e3f-aaf8-b627727310ef","fromColumnLocalLineageTag":"d4a205c5-f13b-4b7e-8f36-346d80c62397","toTableLocalLineageTag":"de09eae1-b7eb-419a-9271-a29359c01b74","toColumnLocalLineageTag":"b59da2fe-2ea8-480b-bb31-c6cd21ff7502"}},"objectType":"Relationship"},{"remoteItemId":{"foreignKeyRelationship":{"fromTableLocalLineageTag":"87ef69ba-8f36-4e3f-aaf8-b627727310ef","fromColumnLocalLineageTag":"49aa1cc6-a6e9-4d07-9bab-8e3516f16461","toTableLocalLineageTag":"b652025e-1af5-49b8-b9e1-a5276f6268d2","toColumnLocalLineageTag":"969991b0-3c21-4800-ac52-399a63480302"}},"objectType":"Relationship"},{"remoteItemId":{"foreignKeyRelationship":{"fromTableLocalLineageTag":"87ef69ba-8f36-4e3f-aaf8-b627727310ef","fromColumnLocalLineageTag":"461f3e8b-2233-4d77-a1a9-7085c8d3a5c2","toTableLocalLineageTag":"b652025e-1af5-49b8-b9e1-a5276f6268d2","toColumnLocalLineageTag":"969991b0-3c21-4800-ac52-399a63480302"}},"objectType":"Relationship"},{"remoteItemId":{"foreignKeyRelationship":{"fromTableLocalLineageTag":"87ef69ba-8f36-4e3f-aaf8-b627727310ef","fromColumnLocalLineageTag":"37383307-1661-4e47-95be-9730fe81b865","toTableLocalLineageTag":"b652025e-1af5-49b8-b9e1-a5276f6268d2","toColumnLocalLineageTag":"969991b0-3c21-4800-ac52-399a63480302"}},"objectType":"Relationship"}]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'CARL_CS02 CSWO_ACTIONTYPE'
+ref table DateTableTemplate_7cf74879-a6ea-4a4d-99e4-f1f41c7be67c
+ref table LocalDateTable_acd5f62c-7397-4aaa-8d60-869198a8000e
+ref table 'CARL_CS02 CSWO_WO'
+ref table LocalDateTable_b95f7e0c-b21f-4a32-810f-efc7212b1747
+ref table LocalDateTable_b78df7c1-b150-4be1-ad37-2c94613e49de
+ref table LocalDateTable_00be6d1b-9f16-49a1-ac43-18f72b7a732d
+ref table LocalDateTable_33dae703-412f-4feb-b2a0-6de1dc4eef2f
+ref table LocalDateTable_b80b84ed-1440-4629-837c-afba61b6c50c
+ref table LocalDateTable_7c99b83d-d9fb-444c-8e6d-56cdae485d44
+ref table LocalDateTable_233b0847-8c38-4dd1-9837-1b287f6792c3
+ref table LocalDateTable_bc4bb629-7e51-4595-97fb-62752e8493af
+ref table LocalDateTable_ad5d1eb4-0ec9-4b32-bb5b-bedb6bebff19
+ref table LocalDateTable_bf3d7d29-8a33-4860-9384-a654ca81703c
+ref table LocalDateTable_ab83099a-ed82-4ff5-a03b-0c362215621f
+ref table LocalDateTable_c7cb0ecf-c621-4276-ba7a-9e9f5c10911c
+ref table LocalDateTable_5dd141b7-523e-4461-a8db-b0456fac58bb
+ref table LocalDateTable_f9fde703-a93c-4132-a650-0aa886100939
+ref table LocalDateTable_306527c5-0faa-47a3-92b1-7103f35ec09a
+ref table LocalDateTable_62c27d31-6492-4b83-895b-2464432dab2c
+ref table LocalDateTable_9f43422b-b7c2-4b14-aef9-2fe0acec1496
+ref table LocalDateTable_de71981d-7a87-4508-8744-32c28cfd9cdc
+ref table LocalDateTable_39324897-1e58-4cd5-a17f-d4fb3a92a19b
+ref table LocalDateTable_94c29b6c-2eee-40ec-8d13-ab3737a29fc3
+ref table LocalDateTable_cd7eb99a-7448-46d1-8d98-0103f7adfb61
+ref table LocalDateTable_97fdd561-3a6a-4fd5-9e05-56b79170cb40
+ref table LocalDateTable_5580b52f-44b5-439c-961d-c38104e797d2
+ref table 'CARL_CS02 CSSY_DESCRIPTION'
+ref table 'CARL_CS02 CSWO_OCCUPATION (2)'
+ref table LocalDateTable_b335416e-e7ed-414e-97e3-becc47e13802
+ref table LocalDateTable_dd1da896-03c2-40a9-8627-2553d493b18b
+ref table 'CARL_CS02 CSWO_TEAM'
+ref table LocalDateTable_84404d02-a642-4ed4-829f-8b08992fcda2
+ref table 'CARL_CS02 CSSY_ACTOR'
+ref table LocalDateTable_49f4b0bf-671c-4e28-93b3-888cf67e122b
+ref table LocalDateTable_07dbeffc-a593-42da-a006-bb312fceae53
+ref table LocalDateTable_635b424e-576e-471a-83c7-d0dbae2529b7
+ref table LocalDateTable_092e0468-c9c9-4810-94e2-dd9804cc69b5
+ref table LocalDateTable_1e3ef15c-9fc3-4411-9893-9a0d072688ca
+ref table LocalDateTable_7ba034c5-1762-4a26-94b9-824b1191768e
+ref table LocalDateTable_82dbdcaf-97dd-49a1-9460-d45f8b231e5b
+ref table LocalDateTable_7117f391-743d-462b-be16-6102530a3467
+ref table LocalDateTable_7de6a676-602b-4185-8796-5c95c76c1c7c
+ref table LocalDateTable_2e04ac41-ae86-4a89-8925-113a9ffc25ce
+ref table LocalDateTable_06420dff-7382-4cff-8a5d-5e6f7c6cbb8c
+
+ref role ENG-DESIGN
+ref role HARDWARE
+ref role CARL
+ref role BIZ+
+ref role ENGINEERING-SOFTWARE
+ref role MARKETING
+
+ref cultureInfo en-US
+

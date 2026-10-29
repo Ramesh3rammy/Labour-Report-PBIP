@@ -1,0 +1,7 @@
+role HARDWARE
+	modelPermission: read
+
+	tablePermission 'CARL_CS02 CSWO_OCCUPATION (2)' = [TEAM] = "HARDWARE"
+
+	annotation PBI_Id = bf50bec23ac14a3cba2ce00646a1d48d
+

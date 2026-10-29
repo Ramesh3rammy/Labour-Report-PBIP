@@ -1,0 +1,7 @@
+role ENG-DESIGN
+	modelPermission: read
+
+	tablePermission 'CARL_CS02 CSWO_OCCUPATION (2)' = [TEAM] = "ENG-DESIGN"
+
+	annotation PBI_Id = e47421e3a939479ab3a1552118c3e3c3
+

@@ -1,0 +1,112 @@
+table 'CARL_CS02 CSWO_ACTIONTYPE'
+	lineageTag: 3c999280-b976-423f-a31b-64c8191249e9
+
+	column ACTIONGROUP
+		dataType: string
+		lineageTag: 80825e97-c5a7-4932-a228-fd3a52c3f520
+		summarizeBy: none
+		sourceColumn: ACTIONGROUP
+
+		annotation SummarizationSetBy = Automatic
+
+	column CODE
+		dataType: string
+		lineageTag: 15bd4f2d-f6a9-45d2-9eb5-ed5f804dd07a
+		summarizeBy: none
+		sourceColumn: CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column DEFAULTDURATION
+		dataType: int64
+		formatString: 0
+		lineageTag: 686a1a28-de47-4cb1-90f5-5f2cb7c7742d
+		summarizeBy: sum
+		sourceColumn: DEFAULTDURATION
+
+		annotation SummarizationSetBy = Automatic
+
+	column DESCRIPTION
+		dataType: string
+		lineageTag: 5f26799c-bb57-42ed-9c75-fd277c6579a1
+		summarizeBy: none
+		sourceColumn: DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID
+		dataType: string
+		lineageTag: 06f66461-3fb5-4517-9928-27cc99ce427b
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column MODIFYDATE
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5ba14c64-f348-4f41-8355-d26b4f5c6561
+		summarizeBy: none
+		sourceColumn: MODIFYDATE
+
+		variation Variation
+			isDefault
+			relationship: 8741a158-43a3-439c-ac4d-caa3e2c6e733
+			defaultHierarchy: LocalDateTable_acd5f62c-7397-4aaa-8d60-869198a8000e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column PERSOID
+		dataType: string
+		lineageTag: 62f634f1-f06d-4685-84a6-2dcdd6a26121
+		summarizeBy: none
+		sourceColumn: PERSOID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SECUPOLICY_ID
+		dataType: string
+		lineageTag: 5cc0282f-7956-4b61-9a6b-a8c9004eda45
+		summarizeBy: none
+		sourceColumn: SECUPOLICY_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SERVICEINFO
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 55b522e3-4de4-42ca-867e-5af73a9c9be6
+		summarizeBy: none
+		sourceColumn: SERVICEINFO
+
+		annotation SummarizationSetBy = Automatic
+
+	column TEMPORALCONTEXTSTORE
+		dataType: string
+		lineageTag: 7f5449cd-494d-46d3-a8bf-20dab81a7df0
+		summarizeBy: none
+		sourceColumn: TEMPORALCONTEXTSTORE
+
+		annotation SummarizationSetBy = Automatic
+
+	column VERSION
+		dataType: int64
+		formatString: 0
+		lineageTag: 51496329-4631-4e3c-bbf3-3b13e5d07cde
+		summarizeBy: sum
+		sourceColumn: VERSION
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'CARL_CS02 CSWO_ACTIONTYPE-e886e736-f538-4803-af27-af9d848ccfef' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("DESKTOP-LLHM0HQ\SQLEXPRESS", "CARL_CS02"),
+				    CARL_CS02_CSWO_ACTIONTYPE = Source{[Schema="CARL_CS02",Item="CSWO_ACTIONTYPE"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(CARL_CS02_CSWO_ACTIONTYPE,{"UOWNER", "CARL_CS02.CSSY_ACL", "CARL_CS02.CSWO_MAINTPLAN", "CARL_CS02.CSWO_PWO", "CARL_CS02.CSWO_T_ACTIONTYPE", "CARL_CS02.CSWO_WO"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

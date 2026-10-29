@@ -1,0 +1,7 @@
+role ENGINEERING-SOFTWARE
+	modelPermission: read
+
+	tablePermission 'CARL_CS02 CSWO_OCCUPATION (2)' = [TEAM] = "ENGINEERING-SOFTWARE"
+
+	annotation PBI_Id = a43f29c9b121441a94853f6815cbf5c2
+

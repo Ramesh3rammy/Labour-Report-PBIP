@@ -1,0 +1,545 @@
+table 'CARL_CS02 CSSY_ACTOR'
+	lineageTag: b652025e-1af5-49b8-b9e1-a5276f6268d2
+
+	measure 'WO COUNT' = ```
+			
+			CALCULATE(
+			    DISTINCTCOUNT('CARL_CS02 CSWO_WO'[WOCODE]
+			    ),
+			    CROSSFILTER(
+			        'CARL_CS02 CSWO_WO'[ID] ,
+			        'CARL_CS02 CSWO_OCCUPATION (2)'[WO_ID],
+			        BOTH
+			    )
+			)
+			   
+			```
+		formatString: 0
+		lineageTag: e47da871-7d3d-4abe-86d0-a1a2b74dc910
+
+	column MRADDRESSEE
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: c1eb76f9-7cc9-47d7-b9d9-d256c58d08c3
+		summarizeBy: none
+		sourceColumn: MRADDRESSEE
+
+		annotation SummarizationSetBy = Automatic
+
+	column UOWNER
+		dataType: string
+		lineageTag: 6505c6ad-700f-47ee-bd3f-a5e0ab298298
+		summarizeBy: none
+		sourceColumn: UOWNER
+
+		annotation SummarizationSetBy = Automatic
+
+	column ADDRESS1
+		dataType: string
+		lineageTag: fd1863f5-868c-40aa-9782-b05f4a495f95
+		summarizeBy: none
+		sourceColumn: ADDRESS1
+
+		annotation SummarizationSetBy = Automatic
+
+	column ADDRESS2
+		dataType: string
+		lineageTag: 0fa51457-29d2-467c-ab0d-910427843d2c
+		summarizeBy: none
+		sourceColumn: ADDRESS2
+
+		annotation SummarizationSetBy = Automatic
+
+	column ADDRESS3
+		dataType: string
+		lineageTag: e6783ff0-a666-4ee4-bf8c-c75542c113fb
+		summarizeBy: none
+		sourceColumn: ADDRESS3
+
+		annotation SummarizationSetBy = Automatic
+
+	column BIRTHDATE
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: dfcf4f50-85f9-4289-bdf2-7971db402251
+		summarizeBy: none
+		sourceColumn: BIRTHDATE
+
+		variation Variation
+			isDefault
+			relationship: 341ca273-dd22-43a4-972d-f227e5a1c528
+			defaultHierarchy: LocalDateTable_49f4b0bf-671c-4e28-93b3-888cf67e122b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CALENDARTYPE
+		dataType: string
+		lineageTag: 15cec4bc-4151-4206-8d58-79342016681c
+		summarizeBy: none
+		sourceColumn: CALENDARTYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column CITY
+		dataType: string
+		lineageTag: cd86ad91-bc5f-4ffb-9a28-fe8ff2d7566d
+		summarizeBy: none
+		sourceColumn: CITY
+
+		annotation SummarizationSetBy = Automatic
+
+	column CODE
+		dataType: string
+		lineageTag: 4e80dbe2-6c90-4964-9b22-75cd5dbdf48b
+		summarizeBy: none
+		sourceColumn: CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column COUNTRY
+		dataType: string
+		lineageTag: c817d858-34ee-483c-abe9-af85b955b7fa
+		summarizeBy: none
+		sourceColumn: COUNTRY
+
+		annotation SummarizationSetBy = Automatic
+
+	column CREATEDFROMFLASH
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: ae956d58-0a14-4bcc-8830-643354cc3906
+		summarizeBy: none
+		sourceColumn: CREATEDFROMFLASH
+
+		annotation SummarizationSetBy = Automatic
+
+	column DEPARTMENT
+		dataType: string
+		lineageTag: 9bc40760-265b-4285-a2b7-2bb76e9c4bb3
+		summarizeBy: none
+		sourceColumn: DEPARTMENT
+
+		annotation SummarizationSetBy = Automatic
+
+	column ENDDATE
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 66cf25e8-e002-4d80-8d81-6f2468a6945b
+		summarizeBy: none
+		sourceColumn: ENDDATE
+
+		variation Variation
+			isDefault
+			relationship: 34c081a4-15bb-4b8d-8246-2f2b37b3d95b
+			defaultHierarchy: LocalDateTable_07dbeffc-a593-42da-a006-bb312fceae53.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column EXTERNAL
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 6eea0e66-bb3e-4d04-bd64-14168967676c
+		summarizeBy: none
+		sourceColumn: EXTERNAL
+
+		annotation SummarizationSetBy = Automatic
+
+	column FULLNAME
+		dataType: string
+		lineageTag: f44499a5-49fe-4274-8238-2c8e9c96c3fd
+		summarizeBy: none
+		sourceColumn: FULLNAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column HIREDATE
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 68524a43-c3c4-4ad3-aa4f-5d1d3ba367fe
+		summarizeBy: none
+		sourceColumn: HIREDATE
+
+		variation Variation
+			isDefault
+			relationship: a4322c4b-3d32-455b-8a84-dabc372aa3e0
+			defaultHierarchy: LocalDateTable_635b424e-576e-471a-83c7-d0dbae2529b7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID
+		dataType: string
+		lineageTag: 969991b0-3c21-4800-ac52-399a63480302
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column JOB
+		dataType: string
+		lineageTag: b9077e30-4db3-4406-b100-acc443926158
+		summarizeBy: none
+		sourceColumn: JOB
+
+		annotation SummarizationSetBy = Automatic
+
+	column LANGUAGE
+		dataType: string
+		lineageTag: 8fb593cb-9b65-4d39-98df-943a0bc9022e
+		summarizeBy: none
+		sourceColumn: LANGUAGE
+
+		annotation SummarizationSetBy = Automatic
+
+	column MOBILITY
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 434b8882-dc43-4673-8db3-724386a6048e
+		summarizeBy: none
+		sourceColumn: MOBILITY
+
+		annotation SummarizationSetBy = Automatic
+
+	column MODIFYDATE
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b1787f3f-66e7-4ceb-858a-28acd8786733
+		summarizeBy: none
+		sourceColumn: MODIFYDATE
+
+		variation Variation
+			isDefault
+			relationship: 160cb95f-ea95-4c8b-9cd9-53a662ab6a0f
+			defaultHierarchy: LocalDateTable_092e0468-c9c9-4810-94e2-dd9804cc69b5.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column PERSOID
+		dataType: string
+		lineageTag: e9be6dec-7588-4c06-b587-9fd68afcc630
+		summarizeBy: none
+		sourceColumn: PERSOID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SECUPOLICY_ID
+		dataType: string
+		lineageTag: 36f9aedd-bff7-4d29-98ca-79be472afc8c
+		summarizeBy: none
+		sourceColumn: SECUPOLICY_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SITE_ID
+		dataType: string
+		lineageTag: 2a857c22-bab8-4b19-a475-53647d32204d
+		summarizeBy: none
+		sourceColumn: SITE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATE
+		dataType: string
+		lineageTag: 30265401-1b97-4ad4-ab8d-54984fb581ab
+		summarizeBy: none
+		sourceColumn: STATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATUS_CHANGEDBY_ID
+		dataType: string
+		lineageTag: f77a7e0b-51be-4a35-9a1b-86a91b5dcd9b
+		summarizeBy: none
+		sourceColumn: STATUS_CHANGEDBY_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATUS_CHANGEDDATE
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b49eb184-0508-4b76-b78d-da03d52c1802
+		summarizeBy: none
+		sourceColumn: STATUS_CHANGEDDATE
+
+		variation Variation
+			isDefault
+			relationship: 338393e4-5ee7-4a21-b876-48a1db517d4c
+			defaultHierarchy: LocalDateTable_1e3ef15c-9fc3-4411-9893-9a0d072688ca.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATUS_CODE
+		dataType: string
+		lineageTag: 45e5e4b6-036c-49e7-b081-f31fe5999950
+		summarizeBy: none
+		sourceColumn: STATUS_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column SUPERVISOR_ID
+		dataType: string
+		lineageTag: 0746344e-5e36-4bbf-a283-fc85254eb12a
+		summarizeBy: none
+		sourceColumn: SUPERVISOR_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TEMPORALCONTEXTSTORE
+		dataType: string
+		lineageTag: 00ad61ff-8f33-441f-8fcd-a643e7134b0b
+		summarizeBy: none
+		sourceColumn: TEMPORALCONTEXTSTORE
+
+		annotation SummarizationSetBy = Automatic
+
+	column TIMEZONEID
+		dataType: string
+		lineageTag: 03e317e4-b1bb-499e-94ae-66d904eb7dab
+		summarizeBy: none
+		sourceColumn: TIMEZONEID
+
+		annotation SummarizationSetBy = Automatic
+
+	column VERSION
+		dataType: int64
+		formatString: 0
+		lineageTag: d4edf72d-eb64-4a4c-b768-3b0c2df52d8f
+		summarizeBy: sum
+		sourceColumn: VERSION
+
+		annotation SummarizationSetBy = Automatic
+
+	column XTRABOOL01
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: cf58bfdd-83e6-4461-a605-f3205500de77
+		summarizeBy: none
+		sourceColumn: XTRABOOL01
+
+		annotation SummarizationSetBy = Automatic
+
+	column XTRABOOL02
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 9e45e83d-7dcf-41b5-92a1-89fb3585eb5b
+		summarizeBy: none
+		sourceColumn: XTRABOOL02
+
+		annotation SummarizationSetBy = Automatic
+
+	column XTRABOOL03
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 51584d2b-9028-4696-94b3-29296b92686b
+		summarizeBy: none
+		sourceColumn: XTRABOOL03
+
+		annotation SummarizationSetBy = Automatic
+
+	column XTRADATE01
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c0236188-ca14-4e4d-825d-ad9913878a4b
+		summarizeBy: none
+		sourceColumn: XTRADATE01
+
+		variation Variation
+			isDefault
+			relationship: 50e42f1f-5507-4a49-8dae-ae9d5d0a00b2
+			defaultHierarchy: LocalDateTable_7ba034c5-1762-4a26-94b9-824b1191768e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column XTRADATE02
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1d97494c-fcb1-46a3-afbf-abe18befb47c
+		summarizeBy: none
+		sourceColumn: XTRADATE02
+
+		variation Variation
+			isDefault
+			relationship: 053af0a7-60b5-4966-9d22-7929b6afd2d6
+			defaultHierarchy: LocalDateTable_82dbdcaf-97dd-49a1-9460-d45f8b231e5b.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column XTRADATE03
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0d96daa0-6b22-4127-8a40-3d21a7002e3f
+		summarizeBy: none
+		sourceColumn: XTRADATE03
+
+		variation Variation
+			isDefault
+			relationship: 335387d2-f2aa-454e-9e65-856580b02fcc
+			defaultHierarchy: LocalDateTable_7117f391-743d-462b-be16-6102530a3467.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column XTRANUM01
+		dataType: double
+		lineageTag: b3110c5e-5de9-4334-b566-f48acbfbb899
+		summarizeBy: sum
+		sourceColumn: XTRANUM01
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column XTRANUM02
+		dataType: double
+		lineageTag: cceac74b-52ad-4313-a003-39b08e89c962
+		summarizeBy: sum
+		sourceColumn: XTRANUM02
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column XTRANUM03
+		dataType: double
+		lineageTag: 702e40fc-dbab-4bf0-987d-53967f41336c
+		summarizeBy: sum
+		sourceColumn: XTRANUM03
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column XTRATXT01
+		dataType: string
+		lineageTag: 9316406a-8d69-44a6-b56e-f290f709e3b5
+		summarizeBy: none
+		sourceColumn: XTRATXT01
+
+		annotation SummarizationSetBy = Automatic
+
+	column XTRATXT02
+		dataType: string
+		lineageTag: 93289f77-5f4b-455a-9bd3-f6fab5a52c3a
+		summarizeBy: none
+		sourceColumn: XTRATXT02
+
+		annotation SummarizationSetBy = Automatic
+
+	column XTRATXT03
+		dataType: string
+		lineageTag: 1dd77cd9-67f0-4da6-a256-5dc797efa892
+		summarizeBy: none
+		sourceColumn: XTRATXT03
+
+		annotation SummarizationSetBy = Automatic
+
+	column XTRATXT04
+		dataType: string
+		lineageTag: f141ae3f-05c9-490e-81c7-a1c3cccdf43d
+		summarizeBy: none
+		sourceColumn: XTRATXT04
+
+		annotation SummarizationSetBy = Automatic
+
+	column XTRATXT05
+		dataType: string
+		lineageTag: e91a3fc4-49fb-48ed-a2d9-2f0185beca73
+		summarizeBy: none
+		sourceColumn: XTRATXT05
+
+		annotation SummarizationSetBy = Automatic
+
+	column XTRATXT06
+		dataType: string
+		lineageTag: e226280b-3dfa-4577-9b59-34b0abcbceb1
+		summarizeBy: none
+		sourceColumn: XTRATXT06
+
+		annotation SummarizationSetBy = Automatic
+
+	column XTRATXT07
+		dataType: string
+		lineageTag: a233fe73-1289-4a55-90d0-7cd4f518396c
+		summarizeBy: none
+		sourceColumn: XTRATXT07
+
+		annotation SummarizationSetBy = Automatic
+
+	column XTRATXT08
+		dataType: string
+		lineageTag: 16893225-b338-4075-a83d-d9e673525f44
+		summarizeBy: none
+		sourceColumn: XTRATXT08
+
+		annotation SummarizationSetBy = Automatic
+
+	column XTRATXT09
+		dataType: string
+		lineageTag: eb4bb950-45e4-40bd-814e-6501a99b2df0
+		summarizeBy: none
+		sourceColumn: XTRATXT09
+
+		annotation SummarizationSetBy = Automatic
+
+	column XTRATXT10
+		dataType: string
+		lineageTag: 296d4722-50bb-447c-9e94-ec6aa3468b79
+		summarizeBy: none
+		sourceColumn: XTRATXT10
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZIPCODE
+		dataType: string
+		lineageTag: 612301c9-1db3-43ad-b17f-236eb5d84ddc
+		summarizeBy: none
+		sourceColumn: ZIPCODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column CGUAGREEMENTTIMESTAMP
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 84097a50-bf40-4bb5-b8f7-91df80fdb0aa
+		summarizeBy: none
+		sourceColumn: CGUAGREEMENTTIMESTAMP
+
+		variation Variation
+			isDefault
+			relationship: a1852c66-e95c-44a8-87e1-006b3301f701
+			defaultHierarchy: LocalDateTable_7de6a676-602b-4185-8796-5c95c76c1c7c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column LATESTFLASHCONNECTIONTIMESTAMP
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 506f879d-d80c-44f8-af78-21784f298838
+		summarizeBy: none
+		sourceColumn: LATESTFLASHCONNECTIONTIMESTAMP
+
+		variation Variation
+			isDefault
+			relationship: 7b8c8bff-65d2-464a-8583-31571a0a6639
+			defaultHierarchy: LocalDateTable_2e04ac41-ae86-4a89-8925-113a9ffc25ce.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column VIGILANCESUPERVISOR
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: da3ce94a-8d98-42e1-af7f-d81587269255
+		summarizeBy: none
+		sourceColumn: VIGILANCESUPERVISOR
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'CARL_CS02 CSSY_ACTOR-c9764f93-c5aa-4df2-82a9-9acdd8de997d' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("DESKTOP-LLHM0HQ\SQLEXPRESS", "CARL_CS02"),
+				    CARL_CS02_CSSY_ACTOR = Source{[Schema="CARL_CS02",Item="CSSY_ACTOR"]}[Data]
+				in
+				    CARL_CS02_CSSY_ACTOR
+
+	annotation PBI_ResultType = Table
+

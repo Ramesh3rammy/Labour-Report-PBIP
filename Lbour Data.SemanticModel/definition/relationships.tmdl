@@ -1,0 +1,214 @@
+relationship 8741a158-43a3-439c-ac4d-caa3e2c6e733
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_ACTIONTYPE'.MODIFYDATE
+	toColumn: LocalDateTable_acd5f62c-7397-4aaa-8d60-869198a8000e.Date
+
+relationship 1dc1d261-c9e0-4214-867d-de865d8fed22
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_WO'.WOBEGIN
+	toColumn: LocalDateTable_b95f7e0c-b21f-4a32-810f-efc7212b1747.Date
+
+relationship 80e5491d-9023-4883-827d-d3215fb275b8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_WO'.WOEND
+	toColumn: LocalDateTable_b78df7c1-b150-4be1-ad37-2c94613e49de.Date
+
+relationship 1c84af46-e48c-42be-a0a5-ce854d61fc6b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_WO'.CREATEDATE
+	toColumn: LocalDateTable_00be6d1b-9f16-49a1-ac43-18f72b7a732d.Date
+
+relationship 6c8f0a81-a5a0-49c8-9662-2a33fddbc626
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_WO'.EXPWOEND
+	toColumn: LocalDateTable_33dae703-412f-4feb-b2a0-6de1dc4eef2f.Date
+
+relationship 35539700-961b-4a31-aa88-e037e3edb8ff
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_WO'.INITWOBEGIN
+	toColumn: LocalDateTable_b80b84ed-1440-4629-837c-afba61b6c50c.Date
+
+relationship 4721325f-ab19-42be-ba85-ad21f360632a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_WO'.INITWOEND
+	toColumn: LocalDateTable_7c99b83d-d9fb-444c-8e6d-56cdae485d44.Date
+
+relationship 8fa5a815-b237-47a9-a147-49b5a8cdb638
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_WO'.MODIFYDATE
+	toColumn: LocalDateTable_233b0847-8c38-4dd1-9837-1b287f6792c3.Date
+
+relationship 3d8bb4f6-6417-4ac0-b4ca-3377f0322883
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_WO'.REMOTECHANGEDDATE
+	toColumn: LocalDateTable_bc4bb629-7e51-4595-97fb-62752e8493af.Date
+
+relationship fdf12c7d-ab95-4f37-85ae-a27cbb2d1194
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_WO'.REPORTDATE
+	toColumn: LocalDateTable_ad5d1eb4-0ec9-4b32-bb5b-bedb6bebff19.Date
+
+relationship 02555d87-9571-47ec-8683-9782cae6a55b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_WO'.SIDETASKSTARTINGDATE
+	toColumn: LocalDateTable_bf3d7d29-8a33-4860-9384-a654ca81703c.Date
+
+relationship fba1d204-ada2-46c5-a9c7-f0869af429d3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_WO'.STATUS_CHANGEDDATE
+	toColumn: LocalDateTable_ab83099a-ed82-4ff5-a03b-0c362215621f.Date
+
+relationship dc6094d2-5692-495c-941e-2d947447ff38
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_WO'.XTRADATE01
+	toColumn: LocalDateTable_c7cb0ecf-c621-4276-ba7a-9e9f5c10911c.Date
+
+relationship 3e86f011-53e0-4568-926b-006f5b3d0f2e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_WO'.XTRADATE02
+	toColumn: LocalDateTable_5dd141b7-523e-4461-a8db-b0456fac58bb.Date
+
+relationship 9a236973-cf2c-408e-8420-b55136b138fc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_WO'.XTRADATE03
+	toColumn: LocalDateTable_f9fde703-a93c-4132-a650-0aa886100939.Date
+
+relationship f35fdefb-bc4e-47ba-b35d-0775fb6a6e6a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_WO'.XTRADATE04
+	toColumn: LocalDateTable_306527c5-0faa-47a3-92b1-7103f35ec09a.Date
+
+relationship f6b6b25c-0e2f-4553-ab1f-9e4617c7d720
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_WO'.XTRADATE05
+	toColumn: LocalDateTable_62c27d31-6492-4b83-895b-2464432dab2c.Date
+
+relationship 995983a0-218c-4f9f-88f3-b5a7026dfcae
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_WO'.XTRADATE06
+	toColumn: LocalDateTable_9f43422b-b7c2-4b14-aef9-2fe0acec1496.Date
+
+relationship b975ac58-1c20-474e-bfe9-c0e9d3a46e1c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_WO'.XTRADATE07
+	toColumn: LocalDateTable_de71981d-7a87-4508-8744-32c28cfd9cdc.Date
+
+relationship ebb50ac2-4a61-4a8c-ac32-735b7d8e6101
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_WO'.XTRADATE08
+	toColumn: LocalDateTable_39324897-1e58-4cd5-a17f-d4fb3a92a19b.Date
+
+relationship 1eb34b7b-34ac-434c-8949-96e9fa68d357
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_WO'.XTRADATE09
+	toColumn: LocalDateTable_94c29b6c-2eee-40ec-8d13-ab3737a29fc3.Date
+
+relationship f5820fb1-59e9-4f36-ad1c-f58807a53a79
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_WO'.XTRADATE10
+	toColumn: LocalDateTable_cd7eb99a-7448-46d1-8d98-0103f7adfb61.Date
+
+relationship 462f457d-d77c-49af-80b2-32c158e0978b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_WO'.ISSUEDATE
+	toColumn: LocalDateTable_97fdd561-3a6a-4fd5-9e05-56b79170cb40.Date
+
+relationship 6b21a011-6c15-4eb4-b295-bf908651e09d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_WO'.RETURNDATE
+	toColumn: LocalDateTable_5580b52f-44b5-439c-961d-c38104e797d2.Date
+
+relationship 66152e2f-deea-4524-bbec-a3cbfeea718a
+	fromColumn: 'CARL_CS02 CSWO_WO'.ACTIONTYPE_ID
+	toColumn: 'CARL_CS02 CSWO_ACTIONTYPE'.ID
+
+relationship d10f288b-ee98-4b6c-aadf-38b1fc346f71
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_OCCUPATION (2)'.MODIFYDATE
+	toColumn: LocalDateTable_b335416e-e7ed-414e-97e3-becc47e13802.Date
+
+relationship bf8b0cdc-0153-4ca1-bdb5-1ef23cad95e8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_OCCUPATION (2)'.OCCUPATIONDATE
+	toColumn: LocalDateTable_dd1da896-03c2-40a9-8627-2553d493b18b.Date
+
+relationship f8d958b6-a909-410c-8a07-23252f965822
+	fromColumn: 'CARL_CS02 CSWO_OCCUPATION (2)'.COMMENTS_ID
+	toColumn: 'CARL_CS02 CSSY_DESCRIPTION'.ID
+
+relationship 7731af73-c7cf-4b41-abd0-2e22bbb7f6a0
+	fromColumn: 'CARL_CS02 CSWO_OCCUPATION (2)'.WO_ID
+	toColumn: 'CARL_CS02 CSWO_WO'.ID
+
+relationship 4e7c8f83-6902-430c-bed3-00709108319f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_TEAM'.MODIFYDATE
+	toColumn: LocalDateTable_84404d02-a642-4ed4-829f-8b08992fcda2.Date
+
+relationship 68641c4f-f63e-47d8-a4f4-959411650fdf
+	fromColumn: 'CARL_CS02 CSWO_OCCUPATION (2)'.'CARL_CS02.CSRE_TECHNICIAN.TEAM_ID'
+	toColumn: 'CARL_CS02 CSWO_TEAM'.ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship 341ca273-dd22-43a4-972d-f227e5a1c528
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSSY_ACTOR'.BIRTHDATE
+	toColumn: LocalDateTable_49f4b0bf-671c-4e28-93b3-888cf67e122b.Date
+
+relationship 34c081a4-15bb-4b8d-8246-2f2b37b3d95b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSSY_ACTOR'.ENDDATE
+	toColumn: LocalDateTable_07dbeffc-a593-42da-a006-bb312fceae53.Date
+
+relationship a4322c4b-3d32-455b-8a84-dabc372aa3e0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSSY_ACTOR'.HIREDATE
+	toColumn: LocalDateTable_635b424e-576e-471a-83c7-d0dbae2529b7.Date
+
+relationship 160cb95f-ea95-4c8b-9cd9-53a662ab6a0f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSSY_ACTOR'.MODIFYDATE
+	toColumn: LocalDateTable_092e0468-c9c9-4810-94e2-dd9804cc69b5.Date
+
+relationship 338393e4-5ee7-4a21-b876-48a1db517d4c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSSY_ACTOR'.STATUS_CHANGEDDATE
+	toColumn: LocalDateTable_1e3ef15c-9fc3-4411-9893-9a0d072688ca.Date
+
+relationship 50e42f1f-5507-4a49-8dae-ae9d5d0a00b2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSSY_ACTOR'.XTRADATE01
+	toColumn: LocalDateTable_7ba034c5-1762-4a26-94b9-824b1191768e.Date
+
+relationship 053af0a7-60b5-4966-9d22-7929b6afd2d6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSSY_ACTOR'.XTRADATE02
+	toColumn: LocalDateTable_82dbdcaf-97dd-49a1-9460-d45f8b231e5b.Date
+
+relationship 335387d2-f2aa-454e-9e65-856580b02fcc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSSY_ACTOR'.XTRADATE03
+	toColumn: LocalDateTable_7117f391-743d-462b-be16-6102530a3467.Date
+
+relationship a1852c66-e95c-44a8-87e1-006b3301f701
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSSY_ACTOR'.CGUAGREEMENTTIMESTAMP
+	toColumn: LocalDateTable_7de6a676-602b-4185-8796-5c95c76c1c7c.Date
+
+relationship 7b8c8bff-65d2-464a-8583-31571a0a6639
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSSY_ACTOR'.LATESTFLASHCONNECTIONTIMESTAMP
+	toColumn: LocalDateTable_2e04ac41-ae86-4a89-8925-113a9ffc25ce.Date
+
+relationship 5e0d99e7-2bb8-4e5e-b8bf-3bd7e58d7554
+	fromColumn: 'CARL_CS02 CSWO_WO'.STATUS_CHANGEDBY_ID
+	toColumn: 'CARL_CS02 CSSY_ACTOR'.ID
+
+	annotation PBI_IsFromSource = FS
+
+relationship fb5489b3-0b69-490f-b3df-92fc1cb7bbb4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'CARL_CS02 CSWO_OCCUPATION (2)'.DATE
+	toColumn: LocalDateTable_06420dff-7382-4cff-8a5d-5e6f7c6cbb8c.Date
+

@@ -1,0 +1,7 @@
+role CARL
+	modelPermission: read
+
+	tablePermission 'CARL_CS02 CSWO_OCCUPATION (2)' = [TEAM] = "CARL"
+
+	annotation PBI_Id = 3d7d3ed39e2a46c08910b0c685a44c95
+

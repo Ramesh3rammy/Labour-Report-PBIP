@@ -1,0 +1,300 @@
+table 'CARL_CS02 CSWO_OCCUPATION (2)'
+	lineageTag: 66c3320e-57b8-4f68-9119-dce5a58c6529
+
+	measure 'du sum' = ROUND(SUM('CARL_CS02 CSWO_OCCUPATION (2)'[DURATION]),30)
+		formatString: 0
+		lineageTag: 95af181b-76ea-4c0c-aeb9-b82aa53a0f59
+
+	measure 'sum decimal time' = SUM('CARL_CS02 CSWO_OCCUPATION (2)'[DURATION])
+		lineageTag: bbce309f-8cd5-4357-b803-b00056121261
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'total time' = ```
+			var total_Hours = SUMX('CARL_CS02 CSWO_OCCUPATION (2)',HOUR('CARL_CS02 CSWO_OCCUPATION (2)'[Time])+MINUTE('CARL_CS02 CSWO_OCCUPATION (2)'[Time])/60)
+			
+			var totalhours = total_Hours
+			var hoursint = TRUNC(totalhours)
+			var minutestotal = ROUND( (totalhours - hoursint) * 60,0)
+			return
+			FORMAT(hoursint,"00")&"H,"&FORMAT(minutestotal,"00")&"M"
+			
+			
+			```
+		lineageTag: cf32c33f-b633-464b-91bf-6113eb232025
+
+	column UOWNER
+		dataType: string
+		lineageTag: 6949ce1b-5ea9-4d77-86b1-48da158cdfb8
+		summarizeBy: none
+		sourceColumn: UOWNER
+
+		annotation SummarizationSetBy = Automatic
+
+	column WO_ID
+		dataType: string
+		lineageTag: 83d05c15-0a84-4e71-8ff2-825b52b6eccd
+		summarizeBy: none
+		sourceColumn: WO_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column WOPROCESS_ID
+		dataType: string
+		lineageTag: c7014a11-0b34-4979-8dbc-34f4fee1c26d
+		summarizeBy: none
+		sourceColumn: WOPROCESS_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column COMMENTS_ID
+		dataType: string
+		lineageTag: f3482b6b-0b1d-4cca-bb7c-9a5ed40c418e
+		summarizeBy: none
+		sourceColumn: COMMENTS_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column HOURTYPE_ID
+		dataType: string
+		lineageTag: c07f73ff-931a-401a-91cd-4f9c0e065efe
+		summarizeBy: none
+		sourceColumn: HOURTYPE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID
+		dataType: string
+		lineageTag: 8d80887a-b5d5-47b2-8b5c-48416fd4b90d
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column LABOURCOST
+		dataType: double
+		lineageTag: c5f3574d-4f93-4c69-817e-4eecc9b38d24
+		summarizeBy: sum
+		sourceColumn: LABOURCOST
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MODIFYDATE
+		dataType: dateTime
+		lineageTag: 9cbb6a7c-971c-4020-bc81-553a2c3c66cb
+		summarizeBy: none
+		sourceColumn: MODIFYDATE
+
+		variation Variation
+			isDefault
+			relationship: d10f288b-ee98-4b6c-aadf-38b1fc346f71
+			defaultHierarchy: LocalDateTable_b335416e-e7ed-414e-97e3-becc47e13802.'Date Hierarchy'
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column OCCUPATIONDATE
+		dataType: dateTime
+		lineageTag: a304b67e-c5b0-4531-a4a7-dfc93cc1c9fb
+		summarizeBy: none
+		sourceColumn: OCCUPATIONDATE
+
+		variation Variation
+			isDefault
+			relationship: bf8b0cdc-0153-4ca1-bdb5-1ef23cad95e8
+			defaultHierarchy: LocalDateTable_dd1da896-03c2-40a9-8627-2553d493b18b.'Date Hierarchy'
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column OCCUPATIONTYPE_ID
+		dataType: string
+		lineageTag: 7d520fae-b105-4118-8e93-7b0bc6ce8c9e
+		summarizeBy: none
+		sourceColumn: OCCUPATIONTYPE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PERSOID
+		dataType: string
+		lineageTag: 3b703c6f-6c2f-419c-9c34-56cfef7ebb7f
+		summarizeBy: none
+		sourceColumn: PERSOID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SECUPOLICY_ID
+		dataType: string
+		lineageTag: baab3f32-1f06-450d-a73e-54a34423a064
+		summarizeBy: none
+		sourceColumn: SECUPOLICY_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TECHNICIAN_ID
+		dataType: string
+		lineageTag: 394c9932-254e-47d2-915b-614c2fac859f
+		summarizeBy: none
+		sourceColumn: TECHNICIAN_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TEMPORALCONTEXTSTORE
+		dataType: string
+		lineageTag: 52d4cb28-b955-4f19-9b09-9aa66840547e
+		summarizeBy: none
+		sourceColumn: TEMPORALCONTEXTSTORE
+
+		annotation SummarizationSetBy = Automatic
+
+	column VERSION
+		dataType: int64
+		formatString: 0
+		lineageTag: 7722e973-0b4a-4d1f-bad2-98c956d07bdd
+		summarizeBy: sum
+		sourceColumn: VERSION
+
+		annotation SummarizationSetBy = Automatic
+
+	column Time = FORMAT(TIME(TRUNC('CARL_CS02 CSWO_OCCUPATION (2)'[DURATION],0),('CARL_CS02 CSWO_OCCUPATION (2)'[DURATION] - TRUNC('CARL_CS02 CSWO_OCCUPATION (2)'[DURATION],0))*60,0),"Long Time")
+		dataType: dateTime
+		lineageTag: c65cf4af-1ba6-4371-a983-1981630ef507
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column DURATION
+		dataType: double
+		lineageTag: 7df3bda2-4625-4dcd-8ace-a698f07df072
+		summarizeBy: sum
+		sourceColumn: DURATION
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NAME
+		dataType: string
+		lineageTag: 210a1b5d-e7f5-41f5-92bf-bb49090f5ba6
+		summarizeBy: none
+		sourceColumn: NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CARL_CS02.CSRE_TECHNICIAN.ID'
+		dataType: string
+		lineageTag: 06a76cc2-2a35-4f11-9a66-91ae828e075e
+		summarizeBy: none
+		sourceColumn: CARL_CS02.CSRE_TECHNICIAN.ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CARL_CS02.CSRE_TECHNICIAN.TEAM_ID'
+		dataType: string
+		lineageTag: 0f1f29c2-1089-4504-80fe-64d8b48ce307
+		summarizeBy: none
+		sourceColumn: CARL_CS02.CSRE_TECHNICIAN.TEAM_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TEAM
+		dataType: string
+		lineageTag: 178149b6-813f-423b-b7c7-0245e922aa1e
+		summarizeBy: none
+		sourceColumn: TEAM
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CARL_CS02.CSRE_TECHNICIAN.CARL_CS02.CSWO_TEAM.DESCRIPTION'
+		dataType: string
+		lineageTag: 8426e50e-52da-4207-882f-0b480453770f
+		summarizeBy: none
+		sourceColumn: CARL_CS02.CSRE_TECHNICIAN.CARL_CS02.CSWO_TEAM.DESCRIPTION
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CARL_CS02.CSRE_TECHNICIAN.CARL_CS02.CSWO_TEAM.ID'
+		dataType: string
+		lineageTag: fc5d8fe4-07a5-48a4-882b-cf67804c6fbb
+		summarizeBy: none
+		sourceColumn: CARL_CS02.CSRE_TECHNICIAN.CARL_CS02.CSWO_TEAM.ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column #Date
+		dataType: string
+		lineageTag: da494d1f-9937-4bed-886a-7474e7a9161d
+		summarizeBy: none
+		sourceColumn: #Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column #Time
+		dataType: string
+		lineageTag: 99fcd42e-92bc-4136-8e22-bb92df9ace88
+		summarizeBy: none
+		sourceColumn: #Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column DATE
+		dataType: dateTime
+		lineageTag: 5a160f70-bff7-4e55-be38-703fadce3d03
+		summarizeBy: none
+		sourceColumn: DATE
+
+		variation Variation
+			isDefault
+			relationship: fb5489b3-0b69-490f-b3df-92fc1cb7bbb4
+			defaultHierarchy: LocalDateTable_06420dff-7382-4cff-8a5d-5e6f7c6cbb8c.'Date Hierarchy'
+
+		changedProperty = FormatString
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column 'DURATION ROUND' = ROUND('CARL_CS02 CSWO_OCCUPATION (2)'[DURATION],2)
+		lineageTag: e944ca66-8a7b-4d9e-9059-9434595fed21
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'CARL_CS02 CSWO_OCCUPATION (2)-dce29606-0193-4992-bb86-3089131cde5e' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("DESKTOP-LLHM0HQ\SQLEXPRESS", "CARL_CS02"),
+				    CARL_CS02_CSWO_OCCUPATION = Source{[Schema="CARL_CS02",Item="CSWO_OCCUPATION"]}[Data],
+				    #"Renamed Columns" = Table.RenameColumns(CARL_CS02_CSWO_OCCUPATION,{{"UOWNER", "NAME"}}),
+				    #"Duplicated Column" = Table.DuplicateColumn(#"Renamed Columns", "OCCUPATIONDATE", "OCCUPATIONDATE - Copy"),
+				    #"Split Column by Delimiter" = Table.SplitColumn(Table.TransformColumnTypes(#"Duplicated Column", {{"OCCUPATIONDATE - Copy", type text}}, "en-US"), "OCCUPATIONDATE - Copy", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"OCCUPATIONDATE - Copy.1", "OCCUPATIONDATE - Copy.2"}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Split Column by Delimiter",{"CARL_CS02.CSSY_ACL", "CARL_CS02.CSSY_DESCRIPTION", "CARL_CS02.CSWO_WO", "CARL_CS02.CSWO_WOPROCESS"}),
+				    #"Expanded CARL_CS02.CSRE_TECHNICIAN" = Table.ExpandRecordColumn(#"Removed Columns", "CARL_CS02.CSRE_TECHNICIAN", {"CODE", "ID", "TEAM_ID", "CARL_CS02.CSWO_TEAM"}, {"CARL_CS02.CSRE_TECHNICIAN.CODE", "CARL_CS02.CSRE_TECHNICIAN.ID", "CARL_CS02.CSRE_TECHNICIAN.TEAM_ID", "CARL_CS02.CSRE_TECHNICIAN.CARL_CS02.CSWO_TEAM"}),
+				    #"Expanded CARL_CS02.CSRE_TECHNICIAN.CARL_CS02.CSWO_TEAM" = Table.ExpandRecordColumn(#"Expanded CARL_CS02.CSRE_TECHNICIAN", "CARL_CS02.CSRE_TECHNICIAN.CARL_CS02.CSWO_TEAM", {"CODE", "DESCRIPTION", "ID"}, {"CARL_CS02.CSRE_TECHNICIAN.CARL_CS02.CSWO_TEAM.CODE", "CARL_CS02.CSRE_TECHNICIAN.CARL_CS02.CSWO_TEAM.DESCRIPTION", "CARL_CS02.CSRE_TECHNICIAN.CARL_CS02.CSWO_TEAM.ID"}),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Expanded CARL_CS02.CSRE_TECHNICIAN.CARL_CS02.CSWO_TEAM",{"CARL_CS02.CSFI_COSTCENTERMVT", "CARL_CS02.CSRE_OCCUPATIONTYPE"}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Removed Columns1",{{"OCCUPATIONDATE - Copy.1", "#Date"}, {"OCCUPATIONDATE - Copy.2", "#Time"}, {"CARL_CS02.CSRE_TECHNICIAN.CARL_CS02.CSWO_TEAM.CODE", "TEAM"}, {"NAME", "UOWNER"}, {"CARL_CS02.CSRE_TECHNICIAN.CODE", "NAME"}}),
+				    #"Duplicated Column1" = Table.DuplicateColumn(#"Renamed Columns1", "OCCUPATIONDATE", "OCCUPATIONDATE - Copy"),
+				    #"Renamed Columns2" = Table.RenameColumns(#"Duplicated Column1",{{"OCCUPATIONDATE - Copy", "DATE"}}),
+				    #"Changed Type with Locale" = Table.TransformColumnTypes(#"Renamed Columns2", {{"DATE", type date}}, "en-AU")
+				in
+				    #"Changed Type with Locale"
+
+	annotation PBI_ResultType = Table
+
